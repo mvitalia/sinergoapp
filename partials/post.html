@@ -6,7 +6,9 @@
             <a class="thumbnail" ng-click="go('/articles/'+item.$$hashKey)" ng-if="post.info1.fullimage.url">
                 <img ng-src="{{ post.info1.fullimage.url }}" alt="{{post.title}}" class="img-responsive">
             </a>
+            
             <p ng-bind-html="post.description"></p>
+            <a href="http://www.sinergoservizi.com/images/stories/corsi_di_formazione/programma%20corso%20difetti%202014.pdf">prova link</a>
             <!--carouselIndex: {{ carouselIndex }}
             <br>carouselBufferIndex: {{ carouselBufferIndex }}-->
             <br>
