@@ -1,9 +1,16 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 12pt;width:832px; }
-.navbar-fixed-top, .navbar-fixed-bottom {width:832px;}
+body { padding-top: 50px;font-size: 12pt;width:100%;background-color:#080808;color:#fff}
+.navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
 
+.navbar-inverse {background-color:#750101}
+.navbar-inverse .navbar-brand,.navbar-fixed-bottom {color:#fff;}
+.navbar-fixed-bottom {line-height:44px;}
+
+.btn-primary{background-color:#750101;border-color:#750101}
+
 a {color:#fff}
+a:hover,a:focus {color:#750101}
 nav {
  font-size: 1.0625em;
 }
@@ -52,21 +59,8 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:200px;line-height:200px;text-align:center;border:1px solid silver;float:left;font-size:30pt;
-background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.82)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#d1000000', GradientType=0);
-    /* IE6-9 */
+.btn_menu {width:50%;height:200px;line-height:200px;text-align:center;border:1px solid #333;float:left;font-size:30pt;
+	box-shadow:-3px 26px 54px #333 inset
 }
 /* Slide animation */
 /*
@@ -130,26 +124,23 @@ background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.82) 1
 #articles { transition: none; }
 #articles .post {
     display: block;
-    height: 260px;
-    margin-top: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
+    height: 50px;
+	box-shadow: 0px 14px 23px #333 inset;
     position: relative;
     overflow: hidden;
     transition: none;
-	border:1px solid;
-	text-align:center
+	border:1px solid #333;
+	text-align:left;
 }
 #articles .post img {height:260px}
 #articles .post .caption {
-    position: absolute;
-    top: 0;
 	width:100%;
     padding: 15px;
-    color: #666;
-	min-height:260px
-    
+	padding-top:10px;
+    color: #fff;
 }
+#articles .post .caption h3 {padding:0;margin:0;}
+#articles .post .article_title {display:block !important;}
+#articles .post .ng-binding {display:none}
+.btn {position:absolute;right:8px;top:8px;}
 
-.navbar-fixed-bottom {color:#999;line-height:44px;}
