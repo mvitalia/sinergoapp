@@ -8,5 +8,5 @@
         MVItalia team
     </author>
     <content src="index.html" />
-    <access origin="http://www.sinergoservizi.com/*" subdomains="true" />
+    <access origin="*" />
 </widget>
