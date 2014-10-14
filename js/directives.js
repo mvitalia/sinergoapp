@@ -36,7 +36,7 @@ function ($swipe) {
         }
 }]);
 
-app.directive('backButton', function(){
+directive('backButton', function(){
     return {
       restrict: 'A',
  
