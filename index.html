@@ -16,18 +16,19 @@
 </head>
 
 <body>
+	
     <div ng-controller="MainCntl"  >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
-        	<img src="img/logo.png">
-            <iframe id="imgbox" frameborder="0" width="100%" height="300px" name="imgbox" src="http://www.sinergoservizi.it/portale/analisi/banner/banner.html" scrolling="no"></iframe>
+        
+        	<div data-ng-include="'partials/header.html'"></div>
+        	
             <div class="view-animate-container">
             
-            	<div class="btn1"><a href="http://www.sinergoservizi.it/portale/analisi/solologin.asp">Accesso analisi</a></div>
-                <div class="btn2"><a href="corsi.html">Corsi formazione</a></div>
-                <div class="btn3"><a href="#">Promozioni</a></div>
-                <div class="btn4"><a href="tel:+393463194621">Telefona</a></div>
-                <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
+            	<div class="btn1 btn_menu"><a href="http://www.sinergoservizi.it/portale/analisi/solologin.asp">Accesso analisi</a></div>
+                <div class="btn2 btn_menu"><a href="corsi.html">Corsi formazione</a></div>
+                <div class="btn3 btn_menu"><a href="#">Promozioni</a></div>
+                <div class="btn4 btn_menu"><a href="tel:+393463194621">Telefona</a></div>
             </div>
 
         </div>
