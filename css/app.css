@@ -1,8 +1,8 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 12pt;width:100%;background-color:#080808;color:#fff}
+body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#080808;color:#fff}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
-.logo {width:100%;}
+.logo {width:60%;}
 .navbar-inverse {background-color:#750101}
 .navbar-inverse .navbar-brand,.navbar-fixed-bottom {color:#fff;}
 .navbar-fixed-bottom {line-height:44px;}
@@ -59,8 +59,8 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:200px;line-height:200px;text-align:center;border:1px solid #333;float:left;font-size:30pt;
-	box-shadow:-3px 26px 54px #333 inset
+.btn_menu {width:50%;height:300px;line-height:300px;text-align:center;border:1px solid #333;float:left;font-size:40pt;
+	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
 /*
@@ -141,5 +141,5 @@ footer {
 #articles .post .caption h3 {padding:0;margin:0;}
 #articles .post .article_title {display:block !important;}
 #articles .post .ng-binding {display:none}
-.btn {position:absolute;right:12px;top:14px;}
+.btn {position:absolute;right:8px;top:8px;}
 
