@@ -8,5 +8,5 @@
         MVItalia team
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://127.0.0.1*" />
 </widget>
