@@ -2,7 +2,7 @@
 body { padding-top: 50px;font-size: 12pt;width:100%;background-color:#080808;color:#fff}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
-
+.logo {width:100%;}
 .navbar-inverse {background-color:#750101}
 .navbar-inverse .navbar-brand,.navbar-fixed-bottom {color:#fff;}
 .navbar-fixed-bottom {line-height:44px;}
@@ -10,7 +10,7 @@ body { padding-top: 50px;font-size: 12pt;width:100%;background-color:#080808;col
 .btn-primary{background-color:#750101;border-color:#750101}
 
 a {color:#fff}
-a:hover,a:focus {color:#750101}
+a:hover,a:focus {color:#750101;text-decoration:none}
 nav {
  font-size: 1.0625em;
 }
@@ -121,10 +121,10 @@ footer {
 }
 /* Custom Style */
 
-#articles { transition: none; }
+#articles { transition: none;margin-top:30px; }
 #articles .post {
     display: block;
-    height: 50px;
+    height: 70px;
 	box-shadow: 0px 14px 23px #333 inset;
     position: relative;
     overflow: hidden;
@@ -136,11 +136,10 @@ footer {
 #articles .post .caption {
 	width:100%;
     padding: 15px;
-	padding-top:10px;
     color: #fff;
 }
 #articles .post .caption h3 {padding:0;margin:0;}
 #articles .post .article_title {display:block !important;}
 #articles .post .ng-binding {display:none}
-.btn {position:absolute;right:8px;top:8px;}
+.btn {position:absolute;right:12px;top:14px;}
 
