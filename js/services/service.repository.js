@@ -28,7 +28,7 @@ angular.module('App.service.repository', [])
                     error(function(data, status) {
                         self.data = data || "Request failed";
                         self.status = status;
-                        alert("fail");
+                        //alert("fail");
                     });
                 },
 
