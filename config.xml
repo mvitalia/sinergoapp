@@ -9,6 +9,7 @@
     </author>
     <content src="index.html" />
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<plugin name="childbrowser" value="com.phonegap.plugins.childbrowser"  />
 	<access origin="*" browserOnly="true" />
 	
 </widget>
