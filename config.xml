@@ -9,6 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="org.li8.inappbrowser" version="0.1" />
 	
 </widget>
