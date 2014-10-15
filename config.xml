@@ -9,7 +9,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<gap:plugin name="org.li8.inappbrowser" version="0.1" />
 	
-	<preference name="Fullscreen" value="true" />
 </widget>
