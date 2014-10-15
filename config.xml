@@ -9,7 +9,7 @@
     </author>
     <content src="corsi.html" />
     <access origin="*" />
-	<gap:plugin name="InAppBrowser" value="org.apache.cordova.core.InAppBrowser" />
+	<gap:plugin name="InAppBrowser" value="org.apache.cordova.inappbrowser" />
 	
 	<preference name="Fullscreen" value="true" />
 </widget>
