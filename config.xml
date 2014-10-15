@@ -9,5 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-	<gap:plugin name="org.apache.cordova.core.inappbrowser" />
+	<gap:plugin name="InAppBrowser" value="org.apache.cordova.core.InAppBrowser" />
+	
+	<preference name="Fullscreen" value="true" />
 </widget>
