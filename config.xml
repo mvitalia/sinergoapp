@@ -2,8 +2,9 @@
 <widget id="sinergo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Sinergo Servizi</name>
     <description>
-        App in Apache Cordova che estrae le promozioni e corsi di formazione dal sito Joomla.
+        App Sinergo Servizi: Corsi di formazione, promozioni e accesso analisi.
     </description>
+	<Icona  src = "img/icon.png"  />
     <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
         MVItalia team
     </author>
