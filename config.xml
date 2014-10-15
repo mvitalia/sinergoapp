@@ -8,7 +8,7 @@
         MVItalia team
     </author>
     <content src="index.html" />
-    <access origin="*" />
-	<gap:plugin name="org.li8.inappbrowser" version="0.1" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<access origin="*" browserOnly="true" />
 	
 </widget>
