@@ -7,7 +7,7 @@
     <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
         MVItalia team
     </author>
-    <content src="index.html" />
+    <content src="corsi.html" />
     <access origin="*" />
 	<gap:plugin name="InAppBrowser" value="org.apache.cordova.core.InAppBrowser" />
 	
