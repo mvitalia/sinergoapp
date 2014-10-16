@@ -10,6 +10,6 @@
     </author>
     <content src="index.html" />
     
-	<access origin="http://www.sinergoservizi.com*" browserOnly="true" />
+	<access origin="http://www.sinergoservizi.com*"  />
 	
 </widget>
