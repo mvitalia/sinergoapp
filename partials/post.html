@@ -1,4 +1,4 @@
-<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-index="slideIndex">
+<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-index="slideIndex"  id="box_testo">
     <li ng-repeat="post in items">
         <div class="page">
             <h2>{{post.title}}</h2>
@@ -7,7 +7,7 @@
                 <img ng-src="{{ post.info1.fullimage.url }}" alt="{{post.title}}" class="img-responsive">
             </a>
             
-            <p id="box_testo" ng-bind-html="post.description"></p>
+            <p  ng-bind-html="post.description"></p>
             
             
             <!--carouselIndex: {{ carouselIndex }}
