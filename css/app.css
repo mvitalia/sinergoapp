@@ -59,7 +59,7 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:300px;line-height:300px;text-align:center;border:1px solid #333;float:left;font-size:40pt;
+.btn_menu {width:50%;height:300px;line-height:300px;text-align:center;border:1px solid #333;float:left;font-size:100%;
 	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
