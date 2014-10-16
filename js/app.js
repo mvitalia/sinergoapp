@@ -66,3 +66,13 @@ config(['$routeProvider', '$locationProvider', '$sceProvider',
 
 
 }]);
+
+$('a').live('tap', function() {
+    url = $(this).attr("rel");   
+    loadURL(url);
+});
+
+function loadURL(url){
+    navigator.app.loadUrl(url, { openExternal:true });
+    return false;
+} 
