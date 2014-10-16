@@ -16,17 +16,18 @@
     
     <!--<a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/solologin.asp');" class="link">Accesso analisi</a></div>-->
     
-    <!-- intercetto tutti i tag a per cambiare href -->
     <script>
-		function cambia_link(){
-			for (i in document.links) {
-			 document.links[i].href = "javascript:loadURL('" + document.links[i].href + "')"; //imposta l'attributo target
+		function cambio_link(){
+			<!-- intercetto tutti i tag a per cambiare href -->
+			var anco= document.getElementById('box_testo').getElementsByTagName('a') ;
+			for (i in anco) {
+				 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
 			}
 		}
 	</script>
 </head>
 
-<body onLoad="cambia_link();">
+<body onLoad="setTimeout(function(){cambio_link()}, 3000)">
     <div ng-controller="MainCntl"  >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
@@ -34,6 +35,14 @@
             <div class="view-animate-container">
                 <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
             </div>
+            
+            <script>
+				<!-- intercetto tutti i tag a per cambiare href -->
+				var anco= document.getElementById('box_testo').getElementsByTagName('a') ;
+				for (i in anco) {
+					 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
+				}
+			</script>
 			<div data-ng-include="'partials/footer.html'"></div>
         </div>
     </div>
