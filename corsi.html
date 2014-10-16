@@ -13,9 +13,20 @@
     <title>Sinergo Servizi App</title>
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
+    
+    <!--<a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/solologin.asp');" class="link">Accesso analisi</a></div>-->
+    
+    <!-- intercetto tutti i tag a per cambiare href -->
+    <script>
+		function cambia_link(){
+			for (i in document.links) {
+			 document.links[i].href = "javascript:loadURL('" + document.links[i].href + "')"; //imposta l'attributo target
+			}
+		}
+	</script>
 </head>
 
-<body>
+<body onLoad="cambia_link();">
     <div ng-controller="MainCntl"  >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
