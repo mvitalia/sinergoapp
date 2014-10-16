@@ -121,7 +121,7 @@ footer {
 }
 /* Custom Style */
 
-.view-animate-container {margin-bottom:70px;}
+.view-animate-container {margin-bottom:85px;}
 #articles { transition: none;margin-top:30px; }
 #articles .post {
     display: block;
@@ -143,6 +143,6 @@ footer {
 #articles .post .caption h3 {padding:0;margin:0;}
 #articles .post .article_title {display:block !important;font-size:100%;}
 #articles .post .ng-binding {display:none}
-.page img {width:95%}
+.page img {width:99%}
 .btn_leggi {position:absolute;right:8px;top:8px;}
 
