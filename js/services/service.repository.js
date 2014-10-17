@@ -20,13 +20,42 @@ angular.module('App.service.repository', [])
                         //angular.copy( data.value.items, self.data );
                         parser = document.createElement('a');
                         for (var i = 0; i < data.value.items.length; i++) {
-							//var anco= data.value.items[i].description.getElementsByTagName('a') ;
-							var link = "'http://www.sinergoservizi.com/images/stories/corsi_di_formazione/vinidea%20modulo.pdf'";
-							data.value.items[i].description += '<a href = "javascript:loadURL(' + link + ')">Prova</a>';
 							
-							/*for (i in anco) {
-								 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
-							}*/
+							var description = data.value.items[i].description;
+							var count_occorency = description.match(/href="/g);  
+							
+							var start_indice_old = 0;
+							if (count_occorency) {
+								for (var j = 0 ; j < count_occorency.length; j++){
+									var temp_desc = description.substring(start_indice_old, description.length);
+									
+									var indice = temp_desc.indexOf('href="'); // prima ricorrenza cerco la fine a partire dall'index
+									
+									// ciclo da inizio href fino a "
+									var l = 0;
+									
+									//s + 6 perche href=" sono 6 caratteri
+									indice=indice+6;
+									var sub = temp_desc.substring(indice, temp_desc.length);
+									
+									var res = sub.split("");
+									for (var lung = 0 ; lung < sub.length; lung++) {
+										if (sub[lung] == '"') {
+											l = lung;
+											start_indice_old = indice; // memorizzo le ricorrenze precedenti
+											break;
+										}
+									}							
+									
+									var ancor = temp_desc.substring(indice,(l+indice));
+									
+									var stringa_new = "javascript:loadURL('" + ancor + "')";
+									description = description.replace(ancor,stringa_new);
+								}
+							}
+							//alert(description);
+							data.value.items[i].description = description; // aggiorno la nuova descrizione
+						
 							
                             self.data.push(data.value.items[i]);
 							//alert(data.value.items[i].description);
