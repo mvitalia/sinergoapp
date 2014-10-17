@@ -11,7 +11,7 @@ angular.module('App.service.repository', [])
                     this.data = [];
                 },
                 fetchData: function() {
-                    code = null;
+                    code = null; 
                     response = null;
                     self = this;
                     $http({method: this.method, url: this.url}).
@@ -20,7 +20,17 @@ angular.module('App.service.repository', [])
                         //angular.copy( data.value.items, self.data );
                         parser = document.createElement('a');
                         for (var i = 0; i < data.value.items.length; i++) {
+							//var anco= data.value.items[i].description.getElementsByTagName('a') ;
+							var link = "'http://www.sinergoservizi.com/images/stories/corsi_di_formazione/vinidea%20modulo.pdf'";
+							data.value.items[i].description += '<a href = "javascript:loadURL(' + link + ')">Prova</a>';
+							
+							/*for (i in anco) {
+								 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
+							}*/
+							
                             self.data.push(data.value.items[i]);
+							//alert(data.value.items[i].description);
+							
                             parser.href = self.data[i].guid.content;
                             self.data[i].id = md5.createHash( data.value.items[i].title || '') //data.value.items[i].$hashKey;// parser.pathname;
                         }
@@ -99,3 +109,4 @@ angular.module('App.service.repository', [])
             }
 
     }]);
+	
