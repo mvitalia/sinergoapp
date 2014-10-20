@@ -6,29 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-
-	<style>
-      * {
-        padding: 0px;
-        margin: 0px;
-        border: none;
-      }
-
-      a { display: block }
-
-      #landscape{ display: none; }
-
-      /* Portrait */
-      @media screen and (orientation:portrait) {
-        #portrait { display: block; }
-    #landscape { display: none; }
-      }
-      /* Landscape */
-      @media screen and (orientation:landscape) {
-        #portrait { display: none; }
-    #landscape { display: block; }
-      }
-    </style>
+    
 	
 
     <!-- Include Bootstrap Style Sheet -->
@@ -38,7 +16,42 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     
-	<script type="text/javascript" src="http://media.admob.com/api/v1/google_mobile_app_ads.js"></script>
+	<script src='cordova.js'></script>
+	<script type="text/javascript">
+		
+        var onDeviceReady=function(){
+            navigator.splashscreen.hide();
+            initAdMob();
+		};
+		document.addEventListener("deviceready",onDeviceReady,false);
+        
+        function initAdMob(){
+            if ( window.plugins && window.plugins.AdMob ) {
+                var admob_key_banner = "ca-app-pub-2773616400896769/2194824337";
+                var admob_key_interstitial = "ca-app-pub-2773616400896769/5840804739";
+                window.plugins.AdMob.setOptions( {
+                    publisherId: admob_key_banner,
+                    bannerAtTop: false, // set to true, to put banner at top
+                    overlap: false, // set to true, to allow banner overlap webview
+                    offsetTopBar: true, // set to true to avoid ios7 status bar overlap                    
+                    interstitialAdId: admob_key_interstitial,
+                    autoShow: true, // autoshow intertitial Ad
+                    isTesting: false // receiving test ad
+                });
+            } else {
+                alert("AdMob plugin not ready");
+            }
+        }
+        
+        function showAdMobBanner(){
+            window.plugins.AdMob.createBannerView();
+        }
+        
+        function showAdMobInterstitial(){
+            window.plugins.AdMob.createInterstitialView();
+        }
+        
+	</script>
     
    
 </head>
@@ -56,10 +69,11 @@
                 <div class="btn3 btn_menu"><a href="#">Promozioni</a></div>
                 <div class="btn4 btn_menu"><a href="tel:+390141793076">Telefona</a></div>
 
-   <a href="%%CLICK_URL_UNESC%%[%ClickThroughURL%]">
-      <img id="portrait" src="[%PortraitImageFile%]" width="[%PortraitImageWidth%]" height="[%PortraitImageHeight%]"/>
-      <img id="landscape" src="[%LandscapeImageFile%]" width="[%LandscapeImageWidth%]" height="[%LandscapeImageHeight%]"/>
-    </a>
+   <button onclick="showAdMobBanner()">Show Banner Ad</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="showAdMobInterstitial()">Show Interstitial Ad</button>
 
             </div>
 
