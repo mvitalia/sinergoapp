@@ -16,7 +16,6 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     
-   <script type="text/javascript" src="js/AdMob.js"></script>
 
     <script>
     function onDocLoad() {
@@ -92,7 +91,7 @@
     </script>
 </head>
 
-<body onload="onDocLoad()" onresize="onResize()">	
+<body onLoad="onDocLoad()" onResize="onResize()">	
     <div ng-controller="MainCntl" data-role="page" >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
@@ -105,8 +104,8 @@
                 <div class="btn3 btn_menu"><a href="#">Promozioni</a></div>
                 <div class="btn4 btn_menu"><a href="tel:+390141793076">Telefona</a></div>
 
-    <p><button onclick="window.plugins.AdMob.showAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Ad</button> <button onclick="window.plugins.AdMob.showAd(false);">hide Ad</button></p>
-    <p><button onclick="window.plugins.AdMob.showInterstitialAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Interstitial Ad</button></p>
+    <p><button onClick="window.plugins.AdMob.showAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Ad</button> <button onClick="window.plugins.AdMob.showAd(false);">hide Ad</button></p>
+    <p><button onClick="window.plugins.AdMob.showInterstitialAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Interstitial Ad</button></p>
    
 
             </div>
