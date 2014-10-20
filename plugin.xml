@@ -1,22 +1,21 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="sinergo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Sinergo Servizi</name>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.admob.AdmobPlugin"
+        version="1.5.0">
+    <name>AdmobPlugin</name>
+    <keywords>ad,admob,google,google-play-service,iad,flurry,device,adwhirl</keywords>
     <description>
-        App Sinergo Servizi: Corsi di formazione, promozioni e accesso analisi.
+    Admob SDK Plugin for phonegap and cordova ,support ios and android,support admob v1 and admob v2
+        project home:https://github.com/admob-google/admob-phonegap<br/>
+		google code:http://code.google.com/p/admob-phonegap/ 
     </description>
-	<icon  src="icon.png"  />
-    <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
-        MVItalia team
-    </author>
-    <content src="index.html" />
-    
-	<access origin="http://www.sinergoservizi.com*"  />
-	
-	<js-module src="js/AdmobPlugin.js" name="AdmobAd">
+    <license>Apache 2.0 License</license>
+    <js-module src="www/AdmobPlugin.js" name="AdmobAd">
         <clobbers target="window.admobAd"/>
     </js-module>
-	<platform name="android">
-        <config-file target="config.xml" parent="/*">
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AdmobPlugin" >
                 <param name="android-package" value="com.admob.cordova.plugin.AdmobAdPlugin"/>
             </feature>
@@ -33,7 +32,7 @@
         
         <source-file src="src/android/libs/google-play-services.jar" target-dir="libs/"/>
     </platform>
-	<platform name="ios">
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="AdmobPlugin">
                 <param name="ios-package" value="AdmobAdPlugin"/>
@@ -56,4 +55,4 @@
         <framework src="SystemConfiguration.framework"/>
         <framework src="AudioToolbox.framework"/>
     </platform>
-</widget>
+</plugin>
