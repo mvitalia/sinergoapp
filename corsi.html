@@ -14,20 +14,10 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     
-    <!--<a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/solologin.asp');" class="link">Accesso analisi</a></div>-->
-    
-    <script>
-		/*function cambio_link(){
-			<!-- intercetto tutti i tag a per cambiare href -->
-			var anco= document.getElementById('box_testo').getElementsByTagName('a') ;
-			for (i in anco) {
-				 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
-			}
-		}*/
-	</script>
+   
 </head>
 
-<body >  <!--onLoad="setTimeout(function(){cambio_link()}, 6000)"-->
+<body > 
     <div ng-controller="MainCntl"  >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
@@ -36,12 +26,7 @@
                 <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
             </div>
             
-           <!-- <script>
-				var anco= document.getElementById('box_testo').getElementsByTagName('a') ;
-				for (i in anco) {
-					 anco[i].href = "javascript:loadURL('" + anco[i].href + "')"; //imposta l'attributo target
-				}
-			</script>-->
+         
 			<div data-ng-include="'partials/footer.html'"></div>
         </div>
     </div>
