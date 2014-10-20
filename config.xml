@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="sinergo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sinergo Servizi</name>
+    <description>
+        App Sinergo Servizi: Corsi di formazione, promozioni e accesso analisi.
+    </description>
+	<icon  src="icon.png"  />
+    <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
+        MVItalia team
+    </author>
+    <content src="index.html" />
+    
+	<access origin="http://www.sinergoservizi.com*"  />
+	
+	<gap:plugin name="AdMob" version="1.0.0" >
+		<parameter name="AD_MOB_ANDROID_AD_UNIT_ID" value="ANDROID_PUBLISHER_ID_HERE" platform="android"/>
+		<parameter name="AD_MOB_IOS_AD_UNIT_ID" value="IOS_PUBLISHER_ID_HERE" platform="ios"/>
+		<parameter name="AD_MOB_WP_AD_UNIT_ID" value="WP7_PUBLISHER_ID_HERE" platform="winphone"/>
+		<parameter name="AD_MOB_ON_TOP" value="true" />
+		<parameter name="AD_MOB_FORCE_START" value="true" />
+		<parameter name="AD_MOB_DEBUG" value="true" />
+	</gap:plugin>
+</widget>
