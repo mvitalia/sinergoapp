@@ -17,41 +17,13 @@
     <link rel="stylesheet" href="css/app.css" />
     
 	<script src='cordova.js'></script>
-	<script type="text/javascript">
-		
-        var onDeviceReady=function(){
-            navigator.splashscreen.hide();
-            initAdMob();
-		};
-		document.addEventListener("deviceready",onDeviceReady,false);
-        
-        function initAdMob(){
-            if ( window.plugins && window.plugins.AdMob ) {
-                var admob_key_banner = "ca-app-pub-6050192823733194/1754804662";
-                var admob_key_interstitial = "ca-app-pub-6050192823733194/1754804662";
-                window.plugins.AdMob.setOptions( {
-                    publisherId: admob_key_banner,
-                    bannerAtTop: false, // set to true, to put banner at top
-                    overlap: false, // set to true, to allow banner overlap webview
-                    offsetTopBar: true, // set to true to avoid ios7 status bar overlap                    
-                    interstitialAdId: admob_key_interstitial,
-                    autoShow: true, // autoshow intertitial Ad
-                    isTesting: false // receiving test ad
-                });
-            } else {
-                alert("AdMob plugin not ready");
-            }
-        }
-        
-        function showAdMobBanner(){
-            window.plugins.AdMob.createBannerView();
-        }
-        
-        function showAdMobInterstitial(){
-            window.plugins.AdMob.createInterstitialView();
-        }
-        
+    <script type="text/javascript">
+    function onDeviceReady() {
+        admobAd.initBanner("ca-app-pub-6050192823733194/1754804662", admobAd.AD_SIZE.BANNER.width, admobAd.AD_SIZE.BANNER.height);
+    }
+    document.addEventListener('deviceready',onDeviceReady, false);
 	</script>
+	
     
    
 </head>
@@ -69,11 +41,13 @@
                 <div class="btn3 btn_menu"><a href="#">Promozioni</a></div>
                 <div class="btn4 btn_menu"><a href="tel:+390141793076">Telefona</a></div>
 
-   <button onclick="showAdMobBanner()">Show Banner Ad</button>
-    <br>
-    <br>
-    <br>
-    <button onclick="showAdMobInterstitial()">Show Interstitial Ad</button>
+   <lu>
+        <li><a href="javascript:admobAd.hideBanner();">hiden banner</a></li>
+        <br/><br/>
+        <li><a href="javascript:admobAd.showBannerAbsolute(0,100)">show banner absolute</a></li>
+        <br/><br/>
+        <li><a href="javascript:admobAd.showBanner(admobAd.AD_POSITION.BOTTOM_CENTER)">show banner relation</a></li>
+    </lu>
 
             </div>
 
