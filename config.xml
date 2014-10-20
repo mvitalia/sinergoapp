@@ -12,12 +12,5 @@
     
 	<access origin="http://www.sinergoservizi.com*"  />
 	
-	<gap:plugin name="AdMob" version="1.0.0" >
-		<parameter name="AD_MOB_ANDROID_AD_UNIT_ID" value="ANDROID_PUBLISHER_ID_HERE" platform="android"/>
-		<parameter name="AD_MOB_IOS_AD_UNIT_ID" value="IOS_PUBLISHER_ID_HERE" platform="ios"/>
-		<parameter name="AD_MOB_WP_AD_UNIT_ID" value="WP7_PUBLISHER_ID_HERE" platform="winphone"/>
-		<parameter name="AD_MOB_ON_TOP" value="true" />
-		<parameter name="AD_MOB_FORCE_START" value="true" />
-		<parameter name="AD_MOB_DEBUG" value="true" />
-	</gap:plugin>
+	<plugin name='AdMobPlugin' value='com.google.cordova.plugin.AdMobPlugin'/>
 </widget>
