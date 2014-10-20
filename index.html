@@ -5,8 +5,30 @@
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+	<style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        border: none;
+      }
+
+      a { display: block }
+
+      #landscape{ display: none; }
+
+      /* Portrait */
+      @media screen and (orientation:portrait) {
+        #portrait { display: block; }
+    #landscape { display: none; }
+      }
+      /* Landscape */
+      @media screen and (orientation:landscape) {
+        #portrait { display: none; }
+    #landscape { display: block; }
+      }
+    </style>
 	
 
     <!-- Include Bootstrap Style Sheet -->
@@ -16,82 +38,12 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     
-
-    <script>
-    function onDocLoad() {
-        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-            document.addEventListener('deviceready', initApp, false);
-        } else {
-            initApp();
-        }
-    }
+	<script type="text/javascript" src="http://media.admob.com/api/v1/google_mobile_app_ads.js"></script>
     
-    function initApp() {
-        initAd();
-
-        // display the banner at startup
-        window.plugins.AdMob.createBannerView();
-    }
-    function initAd(){
-        if ( window.plugins && window.plugins.AdMob ) {
-    	    var ad_units = {
-				ios : {
-					banner: 'ca-app-pub-6869992474017983/4806197152',
-					interstitial: 'ca-app-pub-6869992474017983/7563979554'
-				},
-				android : {
-					banner: 'ca-app-pub-6869992474017983/9375997553',
-					interstitial: 'ca-app-pub-6869992474017983/1657046752'
-				},
-				wp8 : {
-					banner: 'ca-app-pub-6869992474017983/8878394753',
-					interstitial: 'ca-app-pub-6869992474017983/1355127956'
-				}
-    	    };
-    	    var admobid = "";
-    	    if( /(android)/i.test(navigator.userAgent) ) {
-    	    	admobid = ad_units.android;
-    	    } else if(/(iphone|ipad)/i.test(navigator.userAgent)) {
-    	    	admobid = ad_units.ios;
-    	    } else {
-    	    	admobid = ad_units.wp8;
-    	    }
-
-            window.plugins.AdMob.setOptions( {
-                publisherId: admobid.banner,
-                interstitialAdId: admobid.interstitial,
-                bannerAtTop: false, // set to true, to put banner at top
-                overlap: false, // set to true, to allow banner overlap webview
-                offsetTopBar: false, // set to true to avoid ios7 status bar overlap
-                isTesting: false, // receiving test ad
-                autoShow: true // auto show interstitial ad when loaded
-            });
-
-            registerAdEvents();
-            
-        } else {
-            alert( 'admob plugin not ready' );
-        }
-    }
-	// optional, in case respond to events
-    function registerAdEvents() {
-    	document.addEventListener('onReceiveAd', function(){});
-        document.addEventListener('onFailedToReceiveAd', function(data){});
-        document.addEventListener('onPresentAd', function(){});
-        document.addEventListener('onDismissAd', function(){ });
-        document.addEventListener('onLeaveToAd', function(){ });
-        document.addEventListener('onReceiveInterstitialAd', function(){ });
-        document.addEventListener('onPresentInterstitialAd', function(){ });
-        document.addEventListener('onDismissInterstitialAd', function(){ });
-    }
-    function onResize() {
-        var msg = 'web view: ' + window.innerWidth + ' x ' + window.innerHeight;
-        document.getElementById('sizeinfo').innerHTML = msg;
-    }
-    </script>
+   
 </head>
 
-<body onLoad="onDocLoad()" onResize="onResize()">	
+<body>	
     <div ng-controller="MainCntl" data-role="page" >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
@@ -104,9 +56,10 @@
                 <div class="btn3 btn_menu"><a href="#">Promozioni</a></div>
                 <div class="btn4 btn_menu"><a href="tel:+390141793076">Telefona</a></div>
 
-    <p><button onClick="window.plugins.AdMob.showAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Ad</button> <button onClick="window.plugins.AdMob.showAd(false);">hide Ad</button></p>
-    <p><button onClick="window.plugins.AdMob.showInterstitialAd(true,function(){},function(e){alert(JSON.stringify(e));});">show Interstitial Ad</button></p>
-   
+   <a href="%%CLICK_URL_UNESC%%[%ClickThroughURL%]">
+      <img id="portrait" src="[%PortraitImageFile%]" width="[%PortraitImageWidth%]" height="[%PortraitImageHeight%]"/>
+      <img id="landscape" src="[%LandscapeImageFile%]" width="[%LandscapeImageWidth%]" height="[%LandscapeImageHeight%]"/>
+    </a>
 
             </div>
 
