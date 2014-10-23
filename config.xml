@@ -5,6 +5,17 @@
         App Sinergo Servizi: Corsi di formazione, promozioni e accesso analisi.
     </description>
 	<icon  src="icon.png"  />
+	<!-- iPad -->
+	<icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+	<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+	
+	<!-- Settings Icon -->
+	<icon src="icon-small-40.png" gap:platform="ios" width="29" height="29" />
+	<icon src="icon-small-40@2x.png" gap:platform="ios" width="58" height="58" />
+	
+	<!-- Spotlight Icon -->
+	<icon src="icon-40.png" gap:platform="ios" width="40" height="40" />
+	<icon src="icon-40@2x.png" gap:platform="ios" width="80" height="80" />
     <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
         MVItalia team
     </author>
