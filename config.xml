@@ -31,5 +31,4 @@
     
 	<access origin="http://www.sinergoservizi.com*"  />
 	
-	<plugin name='AdMobPlugin' value='com.google.cordova.plugin.AdMobPlugin'/>
 </widget>
