@@ -11,8 +11,8 @@ body { padding-top: 50px;font-size: 100%;width:100%;background-color:#080808;col
 
 a {color:#fff}
 a:hover,a:focus {color:#750101;text-decoration:none}
-nav {
- font-size: 100%;
+nav,nav * {
+ font-size: 80%;
 }
  
 header {
