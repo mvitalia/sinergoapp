@@ -6,8 +6,6 @@
     <meta name="format-detection" content="telephone=no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    
-	
 
     <!-- Include Bootstrap Style Sheet -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.0/css/bootstrap.min.css" />
@@ -16,43 +14,20 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     
-	<script src='cordova.js'></script>
-    <script src='www/AdmobPlugin.js'></script>
-    <script type="text/javascript">
-    function onDeviceReady() {
-        admobAd.initBanner("ca-app-pub-6050192823733194/1754804662", admobAd.AD_SIZE.BANNER.width, admobAd.AD_SIZE.BANNER.height);
-    }
-    document.addEventListener('deviceready',onDeviceReady, false);
-	</script>
-	
-    
    
 </head>
 
-<body>	
-    <div ng-controller="MainCntl" data-role="page" >
+<body > 
+    <div ng-controller="MainCntl"  >
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
-        	<div data-role="header" data-ng-include="'partials/header.html'"></div>
-        	
-            <div class="view-animate-container" data-role="main">
-            
-            	<div class="btn1 btn_menu"><a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/solologin.asp');" class="link">Accesso analisi</a></div>
-                <div class="btn2 btn_menu"><a href="corsi.html">Corsi formazione</a></div>
-                <div class="btn3 btn_menu"><a href="promozioni.html">Promozioni</a></div>
-                <div class="btn4 btn_menu"><a href="tel:+390141793076">Telefona</a></div>
-<!--
-   <lu>
-        <li><a href="javascript:admobAd.hideBanner();">hiden banner</a></li>
-        <br/><br/>
-        <li><a href="javascript:admobAd.showBannerAbsolute(0,100)">show banner absolute</a></li>
-        <br/><br/>
-        <li><a href="javascript:admobAd.showBanner(admobAd.AD_POSITION.BOTTOM_CENTER)">show banner relation</a></li>
-    </lu>
--->
+        	<div data-ng-include="'partials/header.html'"></div>
+            <div class="view-animate-container">
+                <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
             </div>
-
-			<div data-role="footer" data-ng-include="'partials/footer.html'"></div>
+            
+         
+			<div data-ng-include="'partials/footer.html'"></div>
         </div>
     </div>
 
@@ -84,7 +59,7 @@
     <!--<script src="lib/angular-deckgrid.min.js"></script>-->
     <script src="js/app.js"></script>
 
-    <script src="js/services/service.repository.js"></script>
+    <script src="js/services/service.repository_promo.js"></script>
     <script src="js/services.js"></script>
 
     <script src="js/controllers/controller.articles.js"></script>
