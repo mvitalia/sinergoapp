@@ -51,13 +51,6 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 
 }
 
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  #imgbox {height:370px;}
-  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
-  .btn_menu {height:250px;line-height:250px;font-size:30pt}
-
-}
 
 
 header {
@@ -104,7 +97,7 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:250px;line-height:250px;text-align:center;border:1px solid #333;float:left;font-size:100%;
+.btn_menu {width:50%;height:125px;line-height:125px;text-align:center;border:1px solid #333;float:left;font-size:100%;
 	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
