@@ -121,7 +121,7 @@ footer {
 }
 /* Custom Style */
 
-.view-animate-container {margin:0;padding:0;width:100%;float:left;position:absolute;top:50%;}
+.view-animate-container {margin:0;padding:0;width:96%;float:left;position:absolute;top:50%;}
 #articles { transition: none;margin-top:30px; }
 #articles .post {
     display: block;
