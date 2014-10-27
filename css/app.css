@@ -16,6 +16,40 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 }
 #imgbox {width:100%;height:250px;margin-top:20px;background-color:#080808}
 
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  #imgbox {height:250px;}
+	  .btn_menu {height:125px;line-height:125px;font-size:20pt}
+
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+  #imgbox {height:250px;}
+	  .btn_menu {height:125px;line-height:125px;font-size:20pt}
+
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+  #imgbox {height:250px;}
+    .btn_menu {height:125px;line-height:125px;font-size:20pt}
+
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+  #imgbox {height:250px;}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
+  .btn_menu {height:125px;line-height:125px;font-size:20pt}
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  #imgbox {height:370px;}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
+  .btn_menu {height:250px;line-height:250px;font-size:30pt}
+
+}
 
 
 
