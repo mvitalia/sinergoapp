@@ -59,7 +59,7 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:250px;line-height:250px;text-align:center;border:1px solid #333;float:left;font-size:100%;
+.btn_menu {width:50%;height:200px;line-height:200px;text-align:center;border:1px solid #333;float:left;font-size:100%;
 	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
@@ -121,7 +121,7 @@ footer {
 }
 /* Custom Style */
 
-.view-animate-container {margin:0;padding:0;width:100%;float:left;position:absolute;top:42%;}
+.view-animate-container {margin:0;padding:0;width:100%;float:left;position:absolute;top:50%;}
 #articles { transition: none;margin-top:30px; }
 #articles .post {
     display: block;
