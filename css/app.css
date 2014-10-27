@@ -45,9 +45,9 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  #imgbox {height:370px;}
-  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
-  .btn_menu {height:250px;line-height:250px;font-size:30pt}
+  #imgbox {height:370px !important;}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100% !important}
+  .btn_menu {height:250px !important;line-height:250px !important;font-size:30pt !important}
 
 }
 
