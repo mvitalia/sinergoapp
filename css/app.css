@@ -22,12 +22,12 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 
 /* #### Mobile Phones Landscape #### */
 @media screen and (max-device-width: 640px) and (orientation: landscape){
-  #imgbox {height:300px;}
+  #imgbox {height:250px;}
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px){
-  #imgbox {height:300px;}
+  #imgbox {height:250px;}
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
@@ -38,11 +38,17 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px){
   #imgbox {height:370px;}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
+  .btn_menu {height:200px;line-height:200px;font-size:30pt}
+
 }
 
 /* #### Desktops #### */
 @media screen and (min-width: 1024px){
   #imgbox {height:370px;}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
+  .btn_menu {height:200px;line-height:200px;font-size:30pt}
+
 }
 
 
