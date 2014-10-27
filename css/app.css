@@ -12,7 +12,7 @@ body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#080808;col
 a {color:#fff}
 a:hover,a:focus {color:#750101;text-decoration:none}
 .navbar-fixed-bottom,.navbar-fixed-bottom * {
- font-size: 70%;
+ font-size: 75%;
 }
  
 header {
@@ -59,7 +59,7 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:130px;line-height:130px;text-align:center;border:1px solid #333;float:left;font-size:100%;
+.btn_menu {width:50%;height:125px;line-height:125px;text-align:center;border:1px solid #333;float:left;font-size:100%;
 	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
