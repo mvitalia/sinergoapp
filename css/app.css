@@ -12,7 +12,7 @@ body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#080808;col
 a {color:#fff}
 a:hover,a:focus {color:#750101;text-decoration:none}
 nav {
- font-size: 1.0625em;
+ font-size: 90%;
 }
  
 header {
@@ -59,7 +59,7 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:200px;line-height:200px;text-align:center;border:1px solid #333;float:left;font-size:100%;
+.btn_menu {width:50%;height:150px;line-height:150px;text-align:center;border:1px solid #333;float:left;font-size:100%;
 	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
 }
 /* Slide animation */
@@ -121,7 +121,7 @@ footer {
 }
 /* Custom Style */
 
-.view-animate-container {margin:0;padding:0;width:96%;float:left;position:absolute;top:50%;}
+.view-animate-container {margin:0 0 50px;padding:0;width:100%;float:left;top:50%;}
 #articles { transition: none;margin-top:30px; }
 #articles .post {
     display: block;
