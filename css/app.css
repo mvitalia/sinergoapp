@@ -1,5 +1,5 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 100%;width:100%;background-color:#080808;color:#fff}
+body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#080808;color:#fff}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
 .logo {width:60%;}
@@ -11,8 +11,8 @@ body { padding-top: 50px;font-size: 100%;width:100%;background-color:#080808;col
 
 a {color:#fff}
 a:hover,a:focus {color:#750101;text-decoration:none}
-nav,nav * {
- font-size: 80%;
+.navbar-fixed-bottom,.navbar-fixed-bottom * {
+ font-size: 90%;
 }
  
 header {
