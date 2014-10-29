@@ -1,20 +1,20 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#080808;color:#fff}
+body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#B4B4B4;color:#333}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
 .logo {width:60%;}
 .navbar-inverse {background-color:#750101}
-.navbar-inverse .navbar-brand,.navbar-fixed-bottom {color:#fff;}
+.navbar-inverse .navbar-brand,.navbar-fixed-bottom,.navbar-fixed-bottom * {color:#fff;}
 .navbar-fixed-bottom {line-height:44px;}
 
 .btn-primary{background-color:#750101;border-color:#750101}
 
-a {color:#fff}
+a {color:#333}
 a:hover,a:focus {color:#750101;text-decoration:none}
 .navbar-fixed-bottom,.navbar-fixed-bottom * {
  font-size: 78%;
 }
-#imgbox {width:100%;height:250px;margin-top:20px;background-color:#080808}
+#imgbox {width:100%;height:250px;margin-top:20px;background-color:#B4B4B4}
 
 @media screen and (max-device-width: 480px) {
   #imgbox {height:250px;}
@@ -97,8 +97,19 @@ footer {
     padding: 0;
 }
 
-.btn_menu {width:50%;height:125px;line-height:125px;text-align:center;border:1px solid #333;float:left;font-size:100%;
-	box-shadow:-3px 26px 54px #333 inset;font-weight:bold
+.btn_menu {width:50%;height:125px;line-height:125px;text-align:center;border:1px solid #ccc;float:left;font-size:100%;
+	box-shadow:-3px 26px 54px #ccc inset;font-weight:bold; background-color:#fcfcfc;color:#333
+}
+#articles .post {
+    display: block;
+    height: 70px;
+	box-shadow: 0px 14px 23px #ccc inset;
+    position: relative;
+    overflow: hidden;
+    transition: none;
+	background-color:#fcfcfc;
+	border:1px solid #ccc;
+	text-align:left;
 }
 /* Slide animation */
 /*
@@ -161,21 +172,11 @@ footer {
 
 .view-animate-container {margin:0 0 50px;padding:0;width:100%;float:left;top:50%;}
 #articles { transition: none;margin-top:30px; }
-#articles .post {
-    display: block;
-    height: 70px;
-	box-shadow: 0px 14px 23px #333 inset;
-    position: relative;
-    overflow: hidden;
-    transition: none;
-	border:1px solid #333;
-	text-align:left;
-}
+
 #articles .post img {height:260px}
 #articles .post .caption {
 	width:100%;
     padding: 15px;
-    color: #fff;
 }
 .controls {position:relative}
 #articles .post .caption h3 {padding:0;margin:0;}
