@@ -1,5 +1,5 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#B4B4B4;color:#333}
+body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#B4B4B4;color:#000}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
 .logo {width:60%;}
@@ -9,7 +9,7 @@ body { padding-top: 50px;font-size: 20pt;width:100%;background-color:#B4B4B4;col
 
 .btn-primary{background-color:#750101;border-color:#750101}
 
-a {color:#333}
+a {color:#000}
 a:hover,a:focus {color:#750101;text-decoration:none}
 .navbar-fixed-bottom,.navbar-fixed-bottom * {
  font-size: 78%;
@@ -98,7 +98,7 @@ footer {
 }
 
 .btn_menu {width:50%;height:125px;line-height:125px;text-align:center;border:1px solid #ccc;float:left;font-size:100%;
-	box-shadow:-3px 26px 54px #ccc inset;font-weight:bold; background-color:#fcfcfc;color:#333
+	box-shadow:-3px 26px 54px #ccc inset;font-weight:bold; background-color:#fcfcfc;color:#000
 }
 #articles .post {
     display: block;
