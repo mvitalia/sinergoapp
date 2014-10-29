@@ -178,6 +178,7 @@ footer {
 	width:100%;
     padding: 15px;
 }
+.caption_left {padding-left:15px}
 .controls {position:relative}
 #articles .post .caption h3 {padding:0;margin:0;}
 #articles .post .article_title {display:block !important;font-size:100%;}
