@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="sinergo_servizi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sinergo Servizi</name>
+    <description>
+        App Sinergo Servizi: Corsi di formazione, promozioni e accesso analisi.
+    </description>
+	<icon  src="icon.png"  />
+    <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
+        MVItalia team
+    </author>
+    <content src="index.html" />
+    
+	<access origin="http://www.sinergoservizi.com*"  />
+	
+</widget>
