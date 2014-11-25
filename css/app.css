@@ -11,6 +11,7 @@ body { padding-top: 50px;font-size: 16pt;width:100%;background-color:#B4B4B4;col
 
 a {color:#000}
 a:hover,a:focus {color:#750101;text-decoration:none}
+.navbar-fixed-bottom {height:30px !important;overflow:hidden;line-height:30px !important}
 .navbar-fixed-bottom,.navbar-fixed-bottom * {
 	font-size: 9pt !important;
 }
