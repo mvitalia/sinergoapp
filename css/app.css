@@ -33,7 +33,7 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 600px){
   #imgbox {height:130px !important;}
-    .btn_menu {height:70px !important;line-height:70px !important;font-size:16pt !important}
+    .btn_menu {height:65px !important;line-height:65px !important;font-size:16pt !important}
 
 }
 
