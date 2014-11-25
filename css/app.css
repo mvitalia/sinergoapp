@@ -11,9 +11,9 @@ body { padding-top: 50px;font-size: 16pt;width:100%;background-color:#B4B4B4;col
 
 a {color:#000}
 a:hover,a:focus {color:#750101;text-decoration:none}
-.navbar-fixed-bottom {height:20px !important;overflow:hidden;line-height:20px !important}
 .navbar-fixed-bottom,.navbar-fixed-bottom * {
 	font-size: 8pt !important;
+	line-height:20px !important
 }
 #imgbox {width:100%;height:250px;margin-top:20px;background-color:#B4B4B4}
 
@@ -40,14 +40,12 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 /* #### iPhone 4+ Portrait or Landscape #### */
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
   #imgbox {height:250px;}
-  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100%}
   .btn_menu {height:125px;line-height:125px;font-size:20pt}
 }
 
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 720px) {
   #imgbox {height:370px !important;}
-  .navbar-fixed-bottom,.navbar-fixed-bottom * {font-size:100% !important}
   .btn_menu {height:250px !important;line-height:250px !important;font-size:30pt !important}
 }
 
@@ -179,7 +177,7 @@ footer {
 .caption_left {padding-left:15px}
 .controls {position:relative}
 #articles .post .caption h3 {padding:0;margin:0;}
-#articles .post .article_title {display:block !important;font-size:70%;}
+#articles .post .article_title {display:block !important;font-size:65%;}
 #articles .post .ng-binding {display:none}
 .page img {width:99%}
 .btn_leggi {position:absolute;right:8px;top:8px;font-size:10pt}
