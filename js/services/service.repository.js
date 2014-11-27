@@ -50,7 +50,7 @@ angular.module('App.service.repository', [])
 									var ancor = temp_desc.substring(indice,(l+indice));
 									
 									var stringa_new = "javascript:loadURL('" + ancor + "')";
-									description = description.replace(ancor,stringa_new);
+									//description = description.replace(ancor,stringa_new);
 								}
 							}
 							//alert(description);
