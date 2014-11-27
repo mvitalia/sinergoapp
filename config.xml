@@ -28,7 +28,11 @@
         MVItalia team
     </author>
     <content src="index.html" />
-	
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>
+
 	<access origin="*"  />
 	
 </widget>
