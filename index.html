@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="css/app.css" />
     
 	<script src='cordova.js'></script>
-    <script src='www/AdmobPlugin.js'></script>
-    <script src='InAppBrowser.js'></script>
+
     <script type="text/javascript">
     function onDeviceReady() {
         admobAd.initBanner("ca-app-pub-6050192823733194/1754804662", admobAd.AD_SIZE.BANNER.width, admobAd.AD_SIZE.BANNER.height);
@@ -26,9 +25,7 @@
     document.addEventListener('deviceready',onDeviceReady, false);
 	</script>
 	
-    <script>
-    function openDeviceBrowser (externalLinkToOpen){	window.open(externalLinkToOpen, '_system', 'location=no');}
-   </script>
+  
 </head>
 
 <body>	
@@ -45,8 +42,9 @@
                 <div class="btn4 btn_menu"><a href="telefona.html">Telefona</a></div>
 
                 <div class="btn5 btn_menu"><a href="http://www.sinergoservizi.it" target="_blank">Click Me</a></div>
-                <div class="btn5 btn_menu"><a href=" window.open('http://www.sinergoservizi.it', '_blank', 'location=yes'); " >prova</a></div>
-               <div class="btn7 btn_menu"><a href="#" onclick="openDeviceBrowser ('http://www.sinergoservizi.it/')">Link</a></div>
+                <div class="btn6 btn_menu"><a href=" window.open('http://www.sinergoservizi.it', '_system', 'location=yes', 'enableViewportScale=yes'); " >prova system</a></div>
+                <div class="btn7 btn_menu"><a href=" window.open('http://www.sinergoservizi.it', '_blank', 'location=yes', 'enableViewportScale=yes'); " >prova blank</a></div>
+                <div class="btn7 btn_menu"><a href=" window.open('http://www.sinergoservizi.it', '_self', 'location=yes', 'enableViewportScale=yes'); " >prova self</a></div>
 </div>
 
 				
