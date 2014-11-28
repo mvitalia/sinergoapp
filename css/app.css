@@ -46,6 +46,10 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-device-width: 720px) {
   .btn_menu {height:250px !important;line-height:250px !important;font-size:30pt !important}
+  .navbar-fixed-bottom,.navbar-fixed-bottom * {
+	font-size: 12pt !important;
+	line-height:40px !important
+	}
 }
 
 header {
