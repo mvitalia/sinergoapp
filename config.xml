@@ -3,7 +3,6 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
 		xmlns:android   = "http://schemas.android.com/apk/res/android"
         id          = "com.sinergo.servizi"
-        versionCode = "10" 
         version     = "0.1.2" >
 		
 		
@@ -72,9 +71,7 @@
 	<!--Plugins-->
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 
-	
-
-	
+		
 	<access origin="*" />
 
 	
