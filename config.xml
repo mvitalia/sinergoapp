@@ -40,11 +40,9 @@
 	<gap:platform name="android" />
 	<gap:platform name="winphone" />
 	
-	<preference name="phonegap-version" value="3.5.0" />
-	<preference name="fullscreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
 	<preference name="LoadUrlTimeoutValue" value="10000"/>
-	<preference name="LoadingDialog" value="Please wait, the app is loading"/>
+	<preference name="LoadingDialog" value="Attendere"/>
 	<preference name="AllowInlineMediaPlayback" value="true"/>
 	<preference name="SplashScreenDelay" value="7000"/>
 	
@@ -73,19 +71,9 @@
 	
 	<!--Plugins-->
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+
 	
-	<gap:config-file platform="android" parent="/manifest">
-		<supports-screens 
-			android:xlargeScreens="false" 
-			android:largeScreens="false" 
-			android:smallScreens="false" />
-	</gap:config-file>
-	
-	<gap:config-file platform="ios" parent="UISupportedInterfaceOrientations" overwrite="true">
-    <array>
-        <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
-</gap:config-file>
+
 	
 	<access origin="*" />
 
