@@ -52,7 +52,7 @@ angular.module('App.service.repository', [])
 									//var stringa_new = "javascript:loadURL('" + ancor + "')";
 									
 									var stringa_new = '#" onClick="';
-									stringa_new += "window.open('http://www.sinergoservizi.it/portale/analisi/solologin.asp','_system','location=yes');return false;";
+									stringa_new += "window.open('" + ancor + "','_system','location=yes');return false;";
 									description = description.replace(ancor,stringa_new);
 								}
 							}
