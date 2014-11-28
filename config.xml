@@ -15,7 +15,7 @@
 	<icon src="icon-72.png" gap:platform="ios" width="72" height="72" />
 	<icon src="icon-72@2x.png" gap:platform="ios" width="144" height="144" />
 	<icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
-<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+	<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
 	
 	<!-- Settings Icon -->
 	<icon src="icon-small-40.png" gap:platform="ios" width="29" height="29" />
@@ -27,10 +27,27 @@
     <author email="p.guglielmo@mvitalia.com" href="http://www.mvitalia.com/">
         MVItalia team
     </author>
+	
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:platform name="winphone" />
+	
+	<preference name="phonegap-version" value="3.5.0" />
+	<preference name="fullscreen" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+	<preference name="LoadUrlTimeoutValue" value="10000"/>
+	<preference name="LoadingDialog" value="Please wait, the app is loading"/>
+	<preference name="AllowInlineMediaPlayback" value="true"/>
+	<preference name="SplashScreenDelay" value="7000"/>
+	
+	<!-- iPhone and iPod touch -->
+	<gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+	
     <content src="index.html" />
 	
-	<access origin="*"  />
 	<gap:plugin name="org.apache.cordova.inappbrowser"  />
+	<access origin="*"  />
 
 	
 </widget>
