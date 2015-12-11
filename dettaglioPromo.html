@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="it" xng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- Include Bootstrap Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-3.1.0/css/bootstrap.min.css" />
+
+    <title>Sinergo Servizi App</title>
+    <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script src='phonegap.js'></script>
+     
+   
+
+</head>
+
+<body > 
+    
+
+    <div ng-controller="MainCntl">
+        <div data-ng-include="'partials/nav.html'"></div>
+        <div class="container">
+        	<div data-ng-include="'partials/header.html'"></div>
+            
+            <br><br>
+            <!--
+            <a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/iscrizione_corsi/iscrizione.asp');" class="btn_iscri_corsi">ISCRIZIONE CORSI</a>-->
+            <!--<a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/iscrizione_corsi/iscrizione.asp','_system','location=yes');return false;" class="link btn_iscri_corsi">ISCRIZIONE CORSI</a>-->
+            <br><br>
+            <div class="view-animate-container">
+                <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
+                <div id="articles">
+                
+                </div>
+            </div>
+            
+         
+			<div data-ng-include="'partials/footer.html'"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+    <!--script type="text/javascript" src="lib/bootstrap-3.1.0/js/bootstrap.min.js"></script-->
+
+    <script src="lib/jquery-2.1.0.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-touch.js"></script>
+    <script src="lib/angular-carousel.js"></script>
+    <script src="lib/angular-md5.min.js"></script>
+    <!--
+    <script src="lib/hammer.min.js"></script>
+    <script src="lib/angular-hammer.js"></script>
+-->
+    <script src="lib/angular/angular-animate.min.js"></script>
+
+    <script src="lib/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <!--
+    <script src="lib/dragend.js"></script>-->
+
+    <!--<script src="lib/angular-deckgrid.min.js"></script>-->
+    <script src="js/app.js"></script>
+
+    <script src="js/services/service.repository.js"></script>
+    <script src="js/services.js"></script>
+
+    <script src="js/controllers/controller.articles.js"></script>
+    <script src="js/controllers/controller.post.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script>
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
+        $(document).ready(function () {
+            var idCorso = getParameterByName("idCorso");
+
+
+            $.getJSON("http://www.sinergoservizi.com/get_promo.asp?idPromo=" + idCorso, function (info) {
+                var dettaglio = "";
+                for (var i = 0; i < info.length; i++) {
+                    dettaglio = "";
+                    dettaglio += "<div class='row' style='max-width:800px; margin:0 auto;'>"
+                    if (info[i].titolo != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 titoloDettaglio' ><h2 class='article_title' style='color:#750101'> " + info[i].titolo + "</h2></div>";
+                    }
+                    if (info[i].immagine1 != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 immagineDettaglio'> <img  style='margin:0 auto' src='http://www.sinergoservizi.com/public/upload_gallery/immagini/" + info[i].immagine1 + "' class='img-responsive'/></div>";
+                    }
+                    if (info[i].descrizione != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 descrizione'>" + info[i].descrizione + "</div>";
+                    }
+
+                    if (info[i].pdf != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+                       
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:10pt; color:#fff;background-color: #750101;  padding: 20px;    border-radius: 5px; margin-bottom:25px' href='#' class='btnApprofondisci' onClick=\"window.open('http://www.sinergoservizi.com/public/upload_gallery/immagini/" + info[i].pdf+"','_system','location=yes');return false;\">Scarica il PDF</a></div>";
+                        dettaglio += "</div>";
+                    }
+
+                    if (info[i].link != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+                        
+                       dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:10pt; color:#fff;background-color: #750101;  padding: 20px;    border-radius: 5px; margin-bottom:25px' href='#' class='btnApprofondisci' onClick=\"window.open('" + info[i].link+"','_system','location=yes');return false;\">Scarica il PDF</a></div>";
+                        dettaglio += "</div>";
+                    }
+                                      
+                    dettaglio += "</div>"
+                }
+
+                $("#articles").append(dettaglio);
+
+            });
+
+
+        })
+				
+			
+    </script>
+</body>
+
+</html>

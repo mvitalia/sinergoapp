@@ -1,5 +1,5 @@
 /* app css stylesheet */
-body { padding-top: 50px;font-size: 16pt;width:100%;background-color:#B4B4B4;color:#000}
+body { padding-top: 50px;font-size: 16pt;width:100%;background-color:#F3F3F3;color:#000}
 .navbar-fixed-top, .navbar-fixed-bottom {width:100%;}
 .container {text-align:center;width: 100%;}
 .logo {width:60%;}
@@ -18,12 +18,12 @@ a:hover,a:focus {color:#750101;text-decoration:none}
 #imgbox {width:100%;height:250px;margin-top:20px;background-color:#B4B4B4}
 
 .container .btn_iscri_corsi {
-	background-color:#999;
-    border: 1px solid #ccc;
-    box-shadow: 0 14px 23px #ccc inset;
+	background-color:#006634;
+    border: 1px solid #006634;
+    
 	width:50%;
-    padding:15px;
-	color:#750101;
+    padding:20px;
+	color:#fff;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -202,3 +202,112 @@ footer {
 .page img {width:99%}
 .btn_leggi {position:absolute;right:8px;top:8px;font-size:10pt}
 
+ 
+	    .descrizione p
+	    {
+	        font-size:16pt;
+	        text-align:justify;    
+	    }
+	    @media(min-width:450px) and (max-width:1023)
+	    {
+	         .descrizione p
+	        {
+	            font-size:22pt !important;
+	        }   
+	        
+	        body{
+	        	font-size:22pt !important;
+	        }
+	    }
+	     @media(min-width:1024px)
+	    {
+	    	.btn_leggi{
+		    font-size: 18pt !important;
+		}
+	    	
+	         .descrizione p
+	        {
+	            font-size:30pt !important;
+	        }   
+	        
+	        body{
+	        	font-size:20pt !important;
+	        }
+	        .btnApprofondisci{
+	  		font-size:30pt !important;
+	  	}
+	  	
+	  	.testoFooter{
+	  		font-size:20pt !important;
+	  		
+	  	}
+	  	
+	  	.testoFooter a{
+	  		font-size:20pt !important;
+	  	}
+	  	
+	  	#articles .post{
+	  		height: 80px !important;
+	  		line-height: 40px;
+	  	}
+	  	
+	  	.caption_left{
+	  		margin-top:5px !important;
+	  		
+	  	}
+	    }
+	  
+	  .immagineDettaglio{
+	  	margin-bottom:30px !important;
+	  }
+	  
+	  .titoloDettaglio{
+	  	margin-bottom:35px !important;
+	  }
+	 body{
+	 	margin-top: 50px !important;
+	 }
+
+@media (max-width: 768px){
+	.caption_left {
+	    width: 70% !important;
+	    font-size: 11pt !important;
+	    margin-top: 10px !important;
+	}
+}
+
+.caption_left {
+	max-width:80%;
+}
+
+@media(min-width:1025px){
+	.dropdown-menu>li>a{
+		font-size:25pt !important;
+		
+	}
+	.dropdown-menu>li{
+	padding:15px 10px;
+		
+	}
+	.navbar-toggle .icon-bar {
+		margin: 0 auto;
+		width:35px !important;
+		height:1px !important;
+		margin-top:12px !important;
+	}
+	
+		
+	
+	.navbar-toggle{
+		width:80px;
+		height:80px;
+	}
+	
+	.primo{
+		margin-top:11px !important;
+	}
+}
+
+.navbar-toggle{
+	border: 1px solid white !important;
+	}

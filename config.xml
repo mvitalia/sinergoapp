@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.sinergo.servizi" version="0.1.6">		
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.sinergo_servizi" version="1.0.5">		
 	<!--android com.sinergo_servizi version 1.0.1-->
     <name>Sinergo Servizi</name>
     <description>
@@ -71,8 +71,9 @@
 	
 	
 	<!--Plugins-->
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
-	
-	<access origin="*" />
+	<gap:plugin name="org.apache.cordova.inappbrowser"  />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<allow-navigation href="*" />
+	<access origin="*"/>
 
 </widget>

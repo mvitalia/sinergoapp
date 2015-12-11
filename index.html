@@ -26,13 +26,16 @@
         <div class="container">
         	<div data-role="header" data-ng-include="'partials/header.html'" style="width:100%;"></div>
         	
+        	
             <div class="view-animate-container" data-role="main" >
             
-            	<div class="btn1 btn_menu"><a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/solologin.asp','_system','location=yes');return false;" class="link">Accesso analisi</a></div>
-                <div class="btn2 btn_menu"><a href="corsi.html">Corsi formazione</a></div>
-                <div class="btn3 btn_menu"><a href="promozioni.html">Promozioni</a></div>
-                <div class="btn4 btn_menu"><a href="telefona.html">Telefona</a></div>
-               
+            	<div class="btn1 btn_menu" style="margin-top:30px"><a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/solologin.asp','_system','location=yes');return false;" class="link">Accesso analisi</a></div>
+                <div class="btn2 btn_menu" style="margin-top:30px"><a href="corsi.html">Corsi formazione</a></div>
+                <div class="btn3 btn_menu" style="margin-bottom: 30px;"><a href="promozioni.html">Promozioni</a></div>
+                <div class="btn4 btn_menu" style="margin-bottom:30px"><a href="telefona.html">Telefona</a></div>
+             <div id="banner" style="margin-bottom: 30px;">
+                
+            	</div>  
                 
 </div>
 
@@ -95,7 +98,17 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+    <script>
 
+  	$(document).ready(function () {
+	      	$.getJSON("http://www.sinergoservizi.com/get_banner.asp", function (info) {
+			for (var i = 0; i < info.length; i++) {
+	                      var anchor = "<a href='#' onClick=\"window.open('" + info[i].link + "','_system','location=yes');return false;\"><h3 class='caption_left'>" + "</h3>" + "<img  style='max-width:100%' src='http://www.sinergoservizi.com/public/upload_gallery/immagini/" + info[i].immagine1 + "'/>" + "</a>";
+	                      $("#banner").append(anchor);
+			}
+		});
+	})
+    </script>
 </body>
 
 </html>

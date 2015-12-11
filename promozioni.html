@@ -15,6 +15,35 @@
     <link rel="stylesheet" href="css/app.css" />
     
    <script src='phonegap.js'></script>
+   <style>
+	    
+	    @media(max-width:768px)
+	    {
+	        .caption_left
+	        {
+	           width:70%;
+	           font-size:11pt;
+	           margin-top:10px !important;
+	        }       
+	    }
+	    
+	   /* #articles .post
+	    {
+	        height:auto !important;    
+	        padding: 10px;
+	    }
+	    
+	    
+	    
+	    .btn_leggi
+	    {
+	        position:relative !important;
+	        float:right;    
+	        top:0 !important;
+	        right: 0 !important;
+	    }*/
+	    
+	</style>
 </head>
 
 <body > 
@@ -24,6 +53,9 @@
         	<div data-ng-include="'partials/header.html'"></div>
             <div class="view-animate-container">
                 <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
+                <div id="articles">
+                
+                </div>
             </div>
             
          
@@ -74,7 +106,16 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-
+	<script>
+        $(document).ready(function () {
+             $.getJSON("http://www.sinergoservizi.com/get_promo.asp", function (info) {
+                for (var i = 0; i < info.length; i++) {
+                    var anchor = "<a href='dettaglioPromo.html?idPromo=" + info[i].ID + "' class='scelta_telefono article_title post'>" + "<h3 class='caption_left'>" + info[i].titolo + "</h3>" + "<div class='btn btn-primary btn_leggi'> Continua </div>" + "</a>"
+                    $("#articles").append(anchor);
+                }
+            });
+        })
+    </script>
 </body>
 
 </html>

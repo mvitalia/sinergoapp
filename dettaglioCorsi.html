@@ -14,40 +14,43 @@
     <link href="css/angular-carousel.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/app.css" />
     <script src='phonegap.js'></script>
-    <style>
-	    
-	    @media(max-width:768px)
+     <style>
+	    .descrizione p
 	    {
-	        .caption_left
+	        font-size:16pt;
+	        text-align:justify;    
+	    }
+	    @media(min-width:450px) and (max-width:1023)
+	    {
+	         .descrizione p
 	        {
-	           width:70%;
-	           font-size:11pt;
-	           margin-top:10px !important;
-	        }       
+	            font-size:22pt !important;
+	        }   
+	        
+	        body{
+	        	font-size:22pt !important;
+	        }
 	    }
-	    
-	   /* #articles .post
+	     @media(min-width:1024px)
 	    {
-	        height:auto !important;    
-	        padding: 10px;
+	         .descrizione p
+	        {
+	            font-size:30pt !important;
+	        }   
+	        
+	        body{
+	        	font-size:30pt !important;
+	        }
 	    }
-	    
-	    
-	    
-	    .btn_leggi
-	    {
-	        position:relative !important;
-	        float:right;    
-	        top:0 !important;
-	        right: 0 !important;
-	    }*/
-	    
+	  
 	</style>
-
+	
 </head>
 
 <body > 
-    <div ng-controller="MainCntl"  >
+    
+
+    <div ng-controller="MainCntl">
         <div data-ng-include="'partials/nav.html'"></div>
         <div class="container">
         	<div data-ng-include="'partials/header.html'"></div>
@@ -114,18 +117,58 @@
     </script>
     <script>
 
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
         $(document).ready(function () {
-			$.getJSON("http://www.sinergoservizi.com/get_corsi.asp", function (info) {
-				for(var i=0; i<info.length;i++){
-					var anchor = "<a href='dettaglioCorsi.html?idCorso=" + info[i].ID + "' class='scelta_telefono article_title post'>" + "<h3 class='caption_left'>" + info[i].titolo + "</h3>" + "<div class='btn btn-primary btn_leggi'> Continua </div>" + "</a>"
-					$("#articles").append(anchor);
-				}
-			});
+            var idCorso = getParameterByName("idCorso");
+
+
+            $.getJSON("http://www.sinergoservizi.com/get_corsi.asp?idCorso=" + idCorso, function (info) {
+                var dettaglio = "";
+                for (var i = 0; i < info.length; i++) {
+                    dettaglio = "";
+                    dettaglio += "<div class='row' style='max-width:800px; margin:0 auto;'>"
+                    if (info[i].titolo != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 titoloDettaglio'><h2 class='article_title' style='color:#750101'> " + info[i].titolo + "</h2></div>";
+                    }
+                     if (info[i].oscurato == "si") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 '><h6 class='article_title' style='color:#750101'>da programmare</h6></div>";
+                    }
+                    if (info[i].immagine1 != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 immagineDettaglio'> <img  style='margin:0 auto' src='http://www.sinergoservizi.com/public/upload_gallery/immagini/" + info[i].immagine1 + "' class='img-responsive'/></div>";
+                    }
+                    if (info[i].descrizione != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'><p style='text-align:justify'>" + info[i].descrizione + "</p></div>";
+                    }
+
+                    if (info[i].pdf != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+                      
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:20pt; color:#fff;background-color: #750101;  padding: 10px;    border-radius: 5px; margin-bottom:25px' href='#' class='btnApprofondisci' onClick=\"window.open('http://www.sinergoservizi.com/public/upload_gallery/immagini/" + info[i].pdf+"','_system','location=yes');return false;\">Scarica il PDF</a></div>";
+                        dettaglio += "</div>";
+                    }
+                                      
+                    dettaglio += "</div>"
+                }
+
+                $("#articles").append(dettaglio);
+
+            });
+
+
         })
 				
 			
     </script>
-
 </body>
 
 </html>
